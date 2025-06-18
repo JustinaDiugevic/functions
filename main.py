@@ -63,3 +63,24 @@ masyvas = skaiciu_masyvas(10, 100, 5)
 
 rezultatas = masyvo_sumavimas(masyvas)
 print("Masyvo suma:", rezultatas)
+
+print("8 uzduotis".center(60, "_"))
+
+def masyvo_vidurkis(skaiciu_masyvas):
+    suma = masyvo_sumavimas(skaiciu_masyvas)
+    kiekis = len(skaiciu_masyvas)
+    vidurkis = suma / kiekis
+    return vidurkis
+
+masyvas = skaiciu_masyvas(10, 100, 5)
+rez = masyvo_vidurkis(masyvas)
+print("Masyvo vidurkis:", rezultatas)
+
+print("9 uzduotis".center(60, "_"))
+
+def spauzdinti_staciakampi(eiluciu_skaicius,zvaigz_skaicius):
+    for i in range(eiluciu_skaicius):
+        for i in range(zvaigz_skaicius):
+            print("*", end=" ")
+        print()
+spauzdinti_staciakampi(10,30)
