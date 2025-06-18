@@ -84,3 +84,45 @@ def spauzdinti_staciakampi(eiluciu_skaicius,zvaigz_skaicius):
             print("*", end=" ")
         print()
 spauzdinti_staciakampi(10,30)
+
+print("10 uzduotis".center(60, "_"))
+
+def print_sakinys(sakinys):
+    tarpai = sakinys.count(" ")
+    simboliai = len(sakinys) - tarpai
+    print("Simboliu:", simboliai)
+    print("Tarpu:", tarpai)
+
+sakinys = "Šiandien labai graži diena"
+print_sakinys(sakinys)
+
+print("11 uzduotis".center(60, "_"))
+
+def uzkoduoti_sakini(sakinys):
+    uzkoduotas = sakinys[::-1]
+    return uzkoduotas
+
+sakinys = "Šiandien labai graži diena"
+rezultatas = uzkoduoti_sakini(sakinys)
+print("Užkoduotas sakinys:", rezultatas)
+
+print("12 uzduotis".center(60, "_"))
+
+def apsukti_zodzius(sakinys):
+    zodziai = sakinys.split()
+    apsukti = [zodis[::-1] for zodis in zodziai]
+    naujas_sakinys = " ".join(apsukti)
+    print(naujas_sakinys)
+
+apsukti_zodzius("Labas rytas")
+
+print("12 uzduotis".center(60, "_"))
+
+def spausdinti_skaicius(masyvas):
+    for elementas in masyvas:
+        if isinstance(elementas, (int, float)):
+            print(elementas)
+
+
+duomenys = [7, "Labas", "123", 10, None]
+spausdinti_skaicius(duomenys)
