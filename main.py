@@ -116,13 +116,48 @@ def apsukti_zodzius(sakinys):
 
 apsukti_zodzius("Labas rytas")
 
-print("12 uzduotis".center(60, "_"))
+print("13 uzduotis".center(60, "_"))
 
 def spausdinti_skaicius(masyvas):
     for elementas in masyvas:
-        if isinstance(elementas, (int, float)):
+        if isinstance(elementas, int):
             print(elementas)
 
 
 duomenys = [7, "Labas", "123", 10, None]
 spausdinti_skaicius(duomenys)
+
+print("14 uzduotis".center(60, "_"))
+
+def spausdinti_skaicius(masyvas):
+    for elementas in masyvas:
+        if isinstance(elementas, int) and not isinstance(elementas, bool):
+            print(elementas)
+
+duomenys = [7, 8, 5, 12, "Labas", "123", 10, None, 4.4]
+spausdinti_skaicius(duomenys)
+
+print("15 uzduotis".center(60, "_"))
+
+def word_count(sakinys):
+    zodziai = sakinys.split()
+    suma = len(zodziai)
+    return suma
+
+sakinys = "Šiandien labai graži diena"
+rezultatas = word_count(sakinys)
+print("zodziu skaicius:", rezultatas)
+
+print("16 uzduotis".center(60, "_"))
+
+
+def filtruoti_skaicius(masyvas, poriniai):
+    if poriniai:
+        return [skaicius for skaicius in masyvas if skaicius % 2 == 0]
+    else:
+        return [skaicius for skaicius in masyvas if skaicius % 2 != 0]
+
+skaiciai = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print("Poriniai:", filtruoti_skaicius(skaiciai, True))
+print("Neporiniai:", filtruoti_skaicius(skaiciai, False))
