@@ -161,3 +161,56 @@ skaiciai = [1, 2, 3, 4, 5, 6, 7, 8]
 
 print("Poriniai:", filtruoti_skaicius(skaiciai, True))
 print("Neporiniai:", filtruoti_skaicius(skaiciai, False))
+
+print("17 uzduotis".center(60, "_"))
+
+def number_is_prime(skaicius):
+    if skaicius < 2:
+        return False
+    for daliklis in range(2, int(skaicius**0.5) + 1):
+        if skaicius % daliklis == 0:
+            return False
+    return True
+print(number_is_prime(9))
+
+print("18 uzduotis".center(60, "_"))
+
+def pakelta_laipsniu(skaicius, laipsnis):
+    return skaicius ** laipsnis
+rez = pakelta_laipsniu(3, 2)
+print("Atsakymas:", rez)
+
+print("19 uzduotis".center(60, "_"))
+
+def nesikartojantys_skaiciai(masyvas):
+    return [i for i in masyvas if masyvas.count(i) == 1]
+
+rez = nesikartojantys_skaiciai([1, 2, 3, 3, 4])
+print("Atsakymas:", rez)
+
+print("20 uzduotis".center(60, "_"))
+def dazniausias_simbolis(tekstas):
+    max_kiekis = 0
+    simbolis = ''
+    for simbolis in tekstas:
+        kiek = tekstas.count(simbolis)
+        if kiek > max_kiekis:
+            max_kiekis = kiek
+    return simbolis
+rez = dazniausias_simbolis("Šiandien labai graži diena")
+print("Dažniausiai pasikartojantis:", rez)
+
+print("21 uzduotis".center(60, "_"))
+
+def ilgiausias_zodis(tekstas):
+    zodziai = tekstas.split()
+    ilgiausias = ''
+    for zodis in zodziai:
+        if len(zodis) > len(ilgiausias):
+            ilgiausias = zodis
+        return ilgiausias
+rez = ilgiausias_zodis("Šiandien labai graži diena")
+print("Ilgiausias zodis:", rez)
+
+
+
